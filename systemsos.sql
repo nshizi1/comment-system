@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 03, 2023 at 01:53 PM
+-- Generation Time: Oct 05, 2023 at 03:02 PM
 -- Server version: 10.4.28-MariaDB
 -- PHP Version: 8.2.4
 
@@ -39,29 +39,10 @@ CREATE TABLE `comments` (
 --
 
 INSERT INTO `comments` (`commentId`, `comment`, `dateCommented`, `nameId`) VALUES
-(1, 'Nice Picture', '2023-10-03', NULL),
-(2, 'Nice Picture', '2023-10-03', NULL),
-(3, 'Nice Picture', '2023-10-03', NULL),
-(4, 'Looking Good', '2023-10-03', NULL),
-(5, 'Looking Good', '2023-10-03', 2),
-(6, 'Wow', '2023-10-03', 2),
-(7, 'Call her Hugette!!', '2023-10-03', 2),
-(8, 'Call her Elsie', '2023-10-03', 1),
-(9, 'Wow Tona!', '2023-10-03', 1),
-(10, 'Wow Tona!', '2023-10-03', 1),
-(11, 'Wow Tona!', '2023-10-03', 1),
-(12, 'Nice Looking Hair', '2023-10-03', 1),
-(13, 'Nice Looking Hair', '2023-10-03', 1),
-(14, 'Well looking Tona', '2023-10-03', 1),
-(15, 'Well looking Tona', '2023-10-03', 1),
-(16, 'NIce Eyes', '2023-10-03', 2),
-(17, 'NIce Eyes', '2023-10-03', 2),
-(18, 'Nice Picture', '2023-10-03', 2),
-(19, 'Nice Picture', '2023-10-03', 2),
-(20, 'This na be Tona', '2023-10-03', 1),
-(21, 'This na be Tona', '2023-10-03', 1),
-(22, 'This na be Tona', '2023-10-03', 1),
-(23, 'This na be Tona', '2023-10-03', 1);
+(1, 'nice', '2023-10-04', 15),
+(2, 'That means a lot', '2023-10-05', 16),
+(3, 'Cool', '2023-10-05', 15),
+(4, 'Positive thinking', '2023-10-05', 16);
 
 -- --------------------------------------------------------
 
@@ -71,16 +52,17 @@ INSERT INTO `comments` (`commentId`, `comment`, `dateCommented`, `nameId`) VALUE
 
 CREATE TABLE `names` (
   `nameId` int(11) NOT NULL,
-  `name` varchar(255) DEFAULT NULL
+  `name` varchar(255) DEFAULT NULL,
+  `images` text DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `names`
 --
 
-INSERT INTO `names` (`nameId`, `name`) VALUES
-(1, 'Tona Elsie'),
-(2, 'lorem ipsum');
+INSERT INTO `names` (`nameId`, `name`, `images`) VALUES
+(15, 'One', '651d7c96b23109.50295716.png'),
+(16, 'Clavis', '651e79c1d77671.50377287.jpg');
 
 --
 -- Indexes for dumped tables
@@ -107,13 +89,13 @@ ALTER TABLE `names`
 -- AUTO_INCREMENT for table `comments`
 --
 ALTER TABLE `comments`
-  MODIFY `commentId` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;
+  MODIFY `commentId` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `names`
 --
 ALTER TABLE `names`
-  MODIFY `nameId` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `nameId` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
 
 --
 -- Constraints for dumped tables
